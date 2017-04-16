@@ -12099,7 +12099,7 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong>
-The first sample has purchases across the range of product categories, It could perhaps be a local supermarket with a focus on fresh produce. The second sample has high levels of fresh food and very low levels of frozen and paper detergents. Maybe it is a restaurant. The third sample again has purchases across the categories but it does not sell much in the way of fresh produce given the size of its other purchases. It could be a larger supermarket focusing on groceries, frozent goods and cleaning products.</p>
+The first sample has purchases across the range of product categories, It is below average on Fresh and Frosen but above average on Milk, Grocery, Detergents and Delicatessen. This suggests to me that it is some kind of retail establishment such as a small supermarket. The second sample has high levels of fresh food purchases (well above average) but is purchasing well below the average of each other category. Maybe it is a restaurant or a cafe. The third sample again has purchases across the categories. It is again below average in its purchases of Fresh produce but it is well above average in its purchases of Milk, Grocery and Detergents and around average in Frozen. Again this suggests some kind of retail establishment, though somewhat larger than the one described by sample 0.</p>
 
 </div>
 </div>
@@ -13669,7 +13669,7 @@ OVKGYRiGYRiGYRjL5P8Hlbw/WCOgmG0AAAAASUVORK5CYII=
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong>
-The data for Delicatessen is not clearly normally distributed unless it is a heavily skewed normal distribution. Like most of the features the majority of data points are towards the bottom of its range with a few higher values and outliers dragging the range out. The scatter matrix shows that there is no strong positive or negative correlation between Delicatessen and other features. This helps confirm that Delicatessen as shown using the DecisionTreeRegressor above</p>
+The plots suggest some correlation for Milk + Grocery and Grocery + Detergents. There does not appear to be any correlation between between Delicatessen and those features, as suggested by the feature relevance test performed above. The distribition for each feature appears to be some approximation of normal but heavily sqewed towards the bottom of the range.</p>
 
 </div>
 </div>
@@ -18344,10 +18344,10 @@ xv8DGyI4faOo3egAAAAASUVORK5CYII=
 <p><strong>Answer:</strong>
 The total variance explained by the first and second principle components is 0.7168
 The total variance explained by the first four principle components is 0.9411
-The first principle component is associated with a strong positive increase in Milk, Grocery and Detergents, with smaller negative and positive changes for the other features.
-The second principle component is associated with a strong positive increase in Fresh, Frozen and Delicatessen.
-The third principle component associates a strong negative change in Fresh with positive changes in Frozen and Delicatessen
-The fourth principle component is associated with a strong increase in Frozen and a decrease in Delicatessen</p>
+The first principle component is associated with a strong positive increase in Milk, Grocery and Detergents, with smaller negative and positive changes for the other features. This kind of spending could be associated with retail purchases. 
+The second principle component is associated with a strong positive increase in Fresh, Frozen and Delicatessen. This kind of pattern may be associated with customer spending in restaurants or cafes.
+The third principle component associates a strong negative change in Fresh with positive changes in Frozen and Delicatessen. This does not suggest any particular kind customer purchasing pattern to me. I do not associate delicatessens with frozen food sales!
+The fourth principle component is dominated by a strong increase in Frozen and a decrease in Delicatessen. Perhaps this kind of purchasing is associated with a frozen food retail establishment, such as the chain Iceland, found in the UK</p>
 
 </div>
 </div>
@@ -18578,7 +18578,7 @@ The fourth principle component is associated with a strong increase in Frozen an
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x115405e10&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1151f2550&gt;</pre>
 </div>
 
 </div>
@@ -20606,8 +20606,8 @@ AAAA0HEIhAAAAAB0HAIhAAAAAB3n/wMU0ytYnYjgPwAAAABJRU5ErkJggg==
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong>
-Segment 0 appears to represent establishments selling primarily food. Perhaps these could be restaurants and cafes?
-Segment 1 has sales across all categories so possibly represents more general retail establishments such as supermarkets.</p>
+The true centers for each feature of segment 0 are below the sample mean but it is in the top half of the intraquartile range for both fresh and frozen. Segment 0 appears to represent establishments selling primarily food. Perhaps these could be restaurants and cafes?</p>
+<p>Segment 1 has above average sales in Milk Grocery and detergents and is in the top half of the intraquartile range for all of these features. This suggests some kind of retail establishment such as supermarkets</p>
 
 </div>
 </div>
@@ -20661,7 +20661,7 @@ Sample point 2 predicted to be in Cluster 1
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> Samples 0 and 2 are predicted to be in cluster 1, and Sample 1 is predicted to be in cluster 0. These predictions are consistent with the features of these samples.</p>
+<p><strong>Answer:</strong> The true centers for the identified segments would suggests that samples 0 and 2 which both have above average sales of Milk, Grocery and Detergent would belong to cluster 1 and sample 1 whose strongtest sales are in Fresh and Frozen would belong in cluster 0. This is consistent with the predicted segments identified in the test above.</p>
 
 </div>
 </div>
