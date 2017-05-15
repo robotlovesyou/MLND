@@ -1,2 +1,3 @@
 /venv
 /datasets_and_questions/maildir
+*.DS_Store
